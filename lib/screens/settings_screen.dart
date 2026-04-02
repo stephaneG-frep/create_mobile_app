@@ -236,7 +236,10 @@ class _ProviderApiKeyTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedOpacity(
+      duration: const Duration(milliseconds: 200),
+      opacity: isSelected ? 1.0 : 0.45,
+      child: Container(
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -351,6 +354,7 @@ class _ProviderApiKeyTile extends StatelessWidget {
             ],
           ),
         ],
+      ),
       ),
     );
   }

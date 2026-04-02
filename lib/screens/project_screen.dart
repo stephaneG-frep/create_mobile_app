@@ -147,11 +147,6 @@ class _ProjectScreenState extends State<ProjectScreen>
           unselectedLabelColor: AppColors.onSurfaceMuted,
         ),
       ),
-      floatingActionButton: FloatingActionButton.small(
-        onPressed: _shareProject,
-        backgroundColor: AppColors.secondary,
-        child: const Icon(Icons.share, color: Colors.black),
-      ),
       body: TabBarView(
         controller: _tabController,
         children: [

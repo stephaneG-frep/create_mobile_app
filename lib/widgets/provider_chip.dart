@@ -68,7 +68,10 @@ class ProviderCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: AnimatedContainer(
+      child: AnimatedOpacity(
+        duration: const Duration(milliseconds: 200),
+        opacity: isSelected ? 1.0 : 0.45,
+        child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
@@ -109,6 +112,7 @@ class ProviderCard extends StatelessWidget {
                 ),
               ),
           ],
+        ),
         ),
       ),
     );
